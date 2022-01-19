@@ -1,0 +1,266 @@
+/*
+===================
+Font Awesome
+===================
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Open+Sans:400-700&display=swap');
+
+/*
+====================
+Variables
+====================
+*/
+
+:root{
+  /* primaryshades */
+  --clr-primary-1: hsl(205,82%,19%);
+  --clr-primary-2: hsl(205,72%, 21%);
+  --clr-primary-3: hsl(205,72%,29%);
+  --clr-primary-4: hsl(205,52%,39%);
+  --clr-primary-5: #49a6e9;
+  --clr-primary-6: hsl(205,85%,39%);
+  --clr-primary-7: hsl(205,95%,73%);
+  --clr-primary-8: hsl(205,82%,79%);
+  --clr-primary-9: hsl(205,75%,83%);
+  --clr-primary-10: hsl(205,72%,89%);
+  /* dark grey */
+  --clr-grey-1: hsl(201, 15%, 25%);
+  --clr-grey-2: hsl(205, 22%, 24%);
+  --clr-grey-3: hsl(212, 22%, 29%);
+  --clr-grey-4: hsl(205, 22%, 39%);
+  /* light grey  */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-5: hsl(209, 12%, 53%);
+  --clr-grey-6: hsl(210, 22%, 69%);
+  --clr-grey-8: hsl(215, 12%, 71%);
+  --clr-grey-9: hsl(212, 33%, 87%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+
+  --clr-gold: #c5a65c;
+  --clr-lime: #4ea5c6;
+  --clr-smth: #5cdc65;
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-dark-red: hsl(360,75%,35%);
+  --clr-light-red: hsl(360, 56%, 45%);
+  --clr-dark-green: hsl(125, 35%, 35%);
+  --clr-light-green: hsl(125, 45%, 56%);
+
+  --radius: .5rem;
+  --spacing: .25rem;
+  --transition: all .3s linear;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --fixed-width: 620px;
+  --max-width: 1170;
+}
+
+/*
+===================
+Global Styles
+===================
+*/
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: var(--ff-secondary);
+  font-size: .875rem;
+  color: var(--clr-grey-1);
+  background-color: var(--clr-grey-10);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin-bottom: .75rem;
+  text-transform: capitalize;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: .875rem;
+}
+
+p {
+  color: var(--clr-grey-5);
+  margin-bottom: 1.25rem;
+  text-transform: capitalize;
+}
+
+@media screen and(min-width: 620px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.75rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1, 
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*
+==================
+Global Classess
+==================
+*/
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width:920px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  padding: .375rem 75rem;
+  margin: 0;
+  color: var(--clr-gold);
+  border: 2px solid var(--clr-black);
+  transform: var(--transition);
+  border-radius: var(--radius);
+  letter-spacing: var(--spacing);
+  font-family: var(--ff-primary);
+  background: transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: var(--clr-gold);
+  color: white;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+===================
+Ball Transition
+===================
+*/
+
+nav {
+  background: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  height: 3rem;
+  display: grid;
+  align-items: center;
+}
+
+.nav-center{
+  align-items: center;
+  display: flex;
+  width: 90vw;
+  max-width: var(--max-width);
+}
+
+nav h4 {
+  animation: 3s bounce ease-in-out infinite;
+  margin: 0 auto;
+}
+
+nav .value {
+  color: var(--clr-primary-5);
+}
+
+p {
+  font-size: 2rem;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+.ball {
+  border-radius: 25px;
+  width: 200px;
+  height: 200px;
+  /* background: #c00; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+}
+
+img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+
+}
+

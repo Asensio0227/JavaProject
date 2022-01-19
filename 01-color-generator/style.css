@@ -1,0 +1,262 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark primary shades  */
+  --clr-primary-1: hsl(205, 48%, 45%);
+  --clr-primary-2: hsl(205, 55%, 34%);
+  --clr-primary-3: hsl(205, 67%, 32%);
+  --clr-primary-4: hsl(205, 65%, 34%);
+  /* light primary shades  */
+  --clr-primary-5: hsl(205, 86%, 35%);
+  --clr-primary-6: hsl(205, 76%, 44%);
+  --clr-primary-7: hsl(205, 86%, 54%);
+  --clr-primary-8: hsl(205, 65%, 62%);
+  --clr-primary-9: hsl(205, 65%, 64%);
+  --clr-primary-10: hsl(205, 65%, 74%);
+  /* dark grey shades used for headings */
+  --clr-grey-1: hsl(205, 35%, 29%);
+  --clr-grey-2: hsl(205, 35%, 35%);
+  --clr-grey-3: hsl(210, 23%, 35%);
+  --clr-grey-4: hsl(212, 25%, 33%);
+  /* dark grey shades used for paragraphs  */
+  --clr-grey-5: hsl(215, 23%, 55%);
+  --clr-grey-6: hsl(209, 27%, 45%);
+  --clr-grey-7: hsl(209, 15%, 68%);
+  --clr-grey-8: hsl(205, 35%, 67%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 35%, 96%);
+  --white: #fff;
+  --black: #222;
+  --clr-red-dark: hsl(360, 54%, 45%);
+  --clr-red-light: hsl(360, 45%, 55%);
+  --clr-green-dark: hsl(125, 44%, 26%);
+  --clr-green-light: hsl(125, 54%, 56%);
+  --spacing: 0.2;
+  --radius: 0.25;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --fixed-width: 620px;
+  --max-width: 1170px;
+}
+
+/*
+=============
+Global Styles
+=============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  line-height: 1.5;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  font-family: var(--ff-secondary);
+  font-size: 0.875rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  color: var(--clr-grey-5);
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*
+================
+Global Classses
+================
+*/
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 920px) {
+  .section-center{
+    width: 95vw;
+  }
+}
+
+main {
+  min-height: 100vh;
+  place-items: center;
+  display: grid;
+}
+
+/*
+================
+Color Generator
+================
+*/
+
+nav {
+  background: var(--white);
+  display: grid;
+  align-items: center;
+  height: 3rem;
+  box-shadow: var(--dark-shadow);
+}
+
+.nav-center {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+} 
+
+.nav-center h4 {
+  color: var(--clr-primary-1);
+  margin-bottom: 0;
+}
+
+.nav-links {
+  display: flex;
+}
+
+nav a {
+  font-size: 1rem;
+  margin-right: 1rem;
+  text-transform: capitalize;
+  color: var(--clr-grey-1);
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--clr-primary-5);
+}
+
+.underline {
+  height: 0.25rem;
+  width: 9rem;
+  background: var(--clr-primary-7);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  text-align: center;
+}
+
+.container h2 {
+  background: var(--black);
+  color: var(--white);
+  padding: 1.5rem  2rem;
+  margin: 0 auto;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+  text-align: center;
+  justify-content: center;
+}
+
+#color {
+  color: var(--clr-primary-3);
+  letter-spacing: var(--spacing);
+  margin-left: 1rem;
+}
+
+.btn-hero {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-top: 2.5rem;
+  transition: var(--transition);
+  letter-spacing: var(--spacing);
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  background: crimson;
+  color: var(--white);
+  border-color: transparent;
+  display: inline-block;
+  box-shadow: var(--dark-shadow);
+  border-radius: var(--radius);
+  margin-bottom: 4rem;
+}
+
+.btn-hero:hover{
+  color: var(--clr-white);
+  background: var(--clr-black);
+}

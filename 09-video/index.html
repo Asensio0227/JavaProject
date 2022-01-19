@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video_Play</title>
+  <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styl css  -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-center">
+        <h4>sky <span class="value">coding</span></h4>
+    </div>
+  </nav> 
+    <div class="preloader">
+      <img src="./preloader.gif" alt="preloader" class="preloader_item">
+    </div>
+    
+    <header>
+        <video controls autoplay loop class="video-container">
+          <source src="./video.mp4" type="video/mp4">
+        </video>
+        <h2 class="title">Video_Project</h2>
+        <button class="switch-btn">
+          <span>
+            play
+          </span>
+          <span>
+            pause
+          </span>
+          <span class="switch"></span>
+        </button>
+        <div class="btn-container">
+          <button class="prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </header>
+  <!-- script  -->
+  <script src="./app.js"></script>
+</body>
+</html>

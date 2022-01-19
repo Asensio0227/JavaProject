@@ -1,0 +1,247 @@
+/*
+=============
+Font Awesome
+=============
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+
+/*
+=============
+Variables
+=============
+*/
+
+:root {
+  /* primary dark shades  */
+  --clr-primary-1: hsl(205, 97%, 19%);
+  --clr-primary-2: hsl(205, 97%, 21%);
+  --clr-primary-3: hsl(205, 97%, 25%);
+  --clr-primary-4: hsl(205, 97%, 27%);
+  /* primary light shades */
+  --clr-primary-5: hsl(205, 97%, 27%);
+  --clr-primary-6: hsl(205, 87%, 27%);
+  --clr-primary-7: hsl(205, 87%, 32%);
+  --clr-primary-8: hsl(205, 97%, 57%);
+  --clr-primary-9: hsl(205, 97%, 77%);
+  --clr-primary-10: hsl(205, 97%, 87%);
+  /* grey dark shades used for headings */
+  --clr-grey-1: hsl(209, 16%, 26%);
+  --clr-grey-2: hsl(210, 26%, 23%);
+  --clr-grey-3: hsl(205, 26%, 32%);
+  --clr-grey-4: hsl(209, 26%, 32%);
+  /* grey light shades used for paragraphs */
+  --clr-grey-5: hsl(209, 16%, 56%);
+  --clr-grey-6: hsl(210, 36%, 63%);
+  --clr-grey-7: hsl(209, 16%, 72%);
+  --clr-grey-8: hsl(209, 26%, 79%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --white: #fff;
+  --black: #222;
+  --clr-red-dark: hsl(360, 75%, 45%);
+  --clr-red-lght: hsl(360, 57%, 57%);
+  --clr-green-dark: hsl(125, 65%, 26%);
+  --clr-green-light: hsl(125, 45%, 45%);
+  --spacing: 0.2;
+  --radius: 0.25;
+  --transition: all 0.3s linear;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --fixed--width: 620px;
+  --max-width: 1170px; 
+}
+
+/*
+==============
+Global Styles
+==============
+*/
+
+*, 
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  color: var(--clr-grey-1);
+  background: var(--clr-grey-10);
+  line-height: 1.5;
+  font-family: var(--ff-secondary);
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  text-transform: capitalize;
+  margin-bottom: 1.25rem;
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-1);
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  color: var(--clr-grey-5);
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 800px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+}
+
+/*
+==============
+Global Classes
+==============
+*/
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+@media screen and (min-width: 920px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+main {
+  min-height: 100vh;
+  place-items: center;
+  display: grid;
+} 
+
+/*
+==============
+counter
+==============
+*/
+
+nav {
+  background: var(--white);
+  height: 3rem;
+  box-shadow: var(--dark-shadow);
+  display: grid;
+}
+
+.nav-center {
+  width: 90vw;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav-center h4 {
+  margin-bottom: 0;
+  color: var(--clr-primary-5);
+}
+
+.nav-links {
+  display: flex;
+}
+
+nav a {
+  text-transform: capitalize;
+  font-family: var(--ff-primary);
+  letter-spacing: var(--spacing);
+  margin-right: 1rem;
+  font-size: 1rem;
+  color: var(--black);
+}
+
+nav a:hover {
+  color: var(--clr-primary-5);
+}
+
+main {
+  height: calc(100vh - 3rem);
+  place-items: center;
+  display: grid;
+}
+
+.container {
+  text-align: center;
+}
+
+#value {
+  color: var(--black);
+  font-size: 7rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-hero {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  letter-spacing: var(--spacing);
+  justify-content: space-between;
+  margin: 0.5rem 0.75rem;
+  transition: var(--transition);
+  border-radius: var(--radius);
+  border-color: transparent;
+  font-weight: 900;
+  font-family: var(--ff-primary);
+  box-shadow: var(--light-shadow);
+  color: crimson;
+  background: var(--clr-primary-10);
+}
+
+.btn-hero:hover {
+  background: var(--clr-primary-7);
+  color: var(--white);
+  box-shadow: var(--dark-shadow);
+}
+

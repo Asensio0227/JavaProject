@@ -1,0 +1,434 @@
+/*
+================
+Font Awesome
+================
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+================
+Variables
+================
+*/
+
+:root {
+  /* dark primary shades */
+  --clr-primary-1: hsl(205, 87%, 17%);
+  --clr-primary-2: hsl(205, 87%, 21%);
+  --clr-primary-3: hsl(205, 83%, 26%);
+  --clr-primary-4: hsl(205, 87%, 27%);
+  /* light primary shades */
+  --clr-primary-5: #49a6e9;
+
+  --clr-primary-6: hsl(205, 76%, 45%);
+  --clr-primary-7: hsl(205, 87%, 67%);
+  --clr-primary-8: hsl(205, 57%, 77%);
+  --clr-primary-9: hsl(205, 87%, 87%);
+  --clr-primary-10: hsl(205, 87%, 97%);
+
+  /* dark grey shades */
+  --clr-grey-1: hsl(205, 61%, 16%);
+  --clr-grey-2: hsl(205, 49%, 21%);
+  --clr-grey-3: hsl(209, 34%, 27%);
+  --clr-grey-4: hsl(210, 29%, 27%);
+
+  /* light grey shades */
+  --clr-grey-5: hsl(210,22%, 49%);
+  --clr-grey-6: hsl(210,15%, 47%);
+  --clr-grey-7: hsl(215,19%, 57%);
+  --clr-grey-8: hsl(212,29%, 65%);
+  --clr-grey-9: hsl(215,33%, 86%);
+  --clr-grey-10: hsl(210,36%, 96%);
+
+  --clr-lime: #fc5c65;
+  --clr-dodger: #4ecdc4;
+  --clr-gold: #c59d5f;
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-dark-red: hsl(360, 74%, 47%);
+  --clr-light-red: hsl(360, 67%, 57%);
+  --clr-dark-green: hsl(125, 45%, 37%);
+  --clr-light-green: hsl(125, 45%, 67%);
+  --clr-secondary: hsla(182, 63%, 54%);
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all .3s linear;
+  --radius: .2;
+  --spacing:.25;
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --fixed-width: 620px;
+  --max-width: 1170px;
+}
+
+/*
+===============
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-size: .875rem;
+  color: var(--clr-grey-1);
+  background: var(--clr-grey-10);
+  letter-spacing: var(--spacing);
+  font-family: var(--ff-primary);
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.logo) {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25rem;
+  margin-bottom: .85rem;
+  font-family: var(--ff-secondary);
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: .875rem;
+}
+
+p {
+  color: var(--clr-grey-5);
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 620px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.75rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+@keyframes bounce  {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*
+================
+GLobal Classes
+================
+*/
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 920px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  padding: .375rem .75rem;
+  font-size: .875rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  border: 2px solid var(--clr-black);
+  color: var(--clr-gold);
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  letter-spacing: var(--spacing);
+}
+
+.btn:hover {
+  background: var(--clr-gold);
+  color: var(--clr-white);
+}
+
+.btn-white {
+  color: var(--clr-white);
+  border-color: var(--clr-white);
+  border-radius: 0;
+  padding: .5rem 1rem;
+}
+
+.btn:hover {
+  background: var(--clr-white);
+  color: var(--clr-secondary);
+}
+
+
+main {
+  min-height: 100vh; 
+  display: grid;
+  place-items: center;
+}
+
+/*
+============
+Demo-Site
+============
+*/
+
+/*
+  ==========
+  hero
+  ==========
+  */
+  nav {
+    background: var(--clr-white);
+    padding: 1.5rem 1rem;
+  }
+  .fixed-nav  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--clr-white);
+    transition: var(--transition);
+  }
+  .fixed-nav {
+    color: var(--clr-grey-1);
+  }
+  .fixed-nav {
+    color: var(--clr-secondary);
+  }
+  /*.fixed-nav .links-container {
+    height: auto !important;
+  }*/
+  .nav-header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  .nav-header h4 {
+    animation: bounce 3s ease-in-out infinite;
+  }
+  .nav-header .value {
+    color: var(--clr-secondary);
+  }
+  .nav-toggle {
+    color: var(--clr-grey-1);
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  .nav-toggle:hover {
+    color: var(--clr-secondary);
+    transform: rotate(90deg);
+  }
+  header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0,0.7)), url(./hero-bcg.jpeg) center/cover no-repeat;
+  }
+  .banner {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  .container h1 {
+    text-transform: uppercase;
+    color: var(--clr-white);
+  }
+  .container p {
+    max-width: 25rem;
+    color: var(--clr-white);
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+  }
+  @media screen and (min-width: 768px) {
+    .container p {
+      max-width: 40rem;
+    }
+  }
+  /*
+  ===========
+  Links 
+  ===========
+  */
+  .links-container {
+    height: 0px;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .show-links {
+    height: 200px;
+  }
+  .links a {
+    padding: .75rem 0;
+    letter-spacing: var(--spacing);
+    background: var(--clr-white);
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--clr-grey-5);
+    text-transform: capitalize;
+  }
+  .links a:hover {
+    color: var(--clr-secondary);
+    animation: bounce 3s ease-in-out infinite;
+    display: block;
+    background: var(--clr-primary-10);
+    transition: var(--transition);
+  }
+  @media screen and (min-width: 800px) {
+    nav {
+      background: transparent;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .links {
+      display: flex;
+    }
+    .nav-center {
+      width: 90vw;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .links a {
+      background: transparent;
+      color: var(--clr-black);
+      letter-spacing: var(--spacing);
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: var(--transition);
+      display: block;
+      text-transform: capitalize;
+      margin: 0 1rem;
+      padding: 0;
+    }
+    .links a:hover {
+      color: var(--clr-grey-1);
+      display: flex;
+      background: transparent;
+    }
+    .links-container {
+      height:  auto !important;
+    }
+  }
+  /*
+  ================
+  Secion and Title
+  ================
+  */
+  .title h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .title span {
+    color: var(--clr-secondary);
+  }
+  #services,
+  #tours,
+  #about {
+    height: 80vh;
+  }
+  #services {
+    background: var(--clr-white);
+  }
+  footer {
+    padding: 5rem 1rem;
+    background: var(--clr-grey-1);
+  }
+  footer p {
+    text-transform: capitalize;
+    color: var(--clr-white);
+    margin-bottom: 0;
+    text-align: center;
+    letter-spacing: var(--spacing);
+  }
+  .top-link {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    background: var(--clr-secondary);
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    place-items: center;
+    animation: bounce 3s ease-in-out infinite;
+    visibility: hidden;
+    z-index: -100;
+  }
+  .show-link {
+    visibility: visible;
+    z-index: 100;
+  }
