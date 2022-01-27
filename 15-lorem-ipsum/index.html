@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15-lorem-Ipsum</title>
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- style css  -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="toggle">
+    <button class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+  
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h4>sky<span>coding</span></h4>
+      <button class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="links-container">
+      <ul class="links">
+        <li>
+          <a href="#home">home</a>
+        </li>
+        <li>
+          <a href="#about">about</a>
+        </li>
+        <li>
+          <a href="#services">services</a>
+        </li>
+        <li>
+          <a href="#projects">projects</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="social-icons">
+      <li>
+        <a href="https://www.twitter.com">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com">
+          <i class="fab fa-behance"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com">
+          <i class="fab fa-sketch"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <section class="section-center">
+    <h3>tired of boring lorem ipsum?</h3>
+    <form class="lorem-form">
+      <label for="amount">paragraphs : </label>
+    <input type="number" name="amount" id='amount' placeholder="5">
+    <button class="submit" type="button">
+      generator
+    </button>
+  </form>
+  <article class="lorem-text"></article>
+  </section>
+  
+  <!-- javascript  -->
+  <script src="./app.js"></script>
+</body>
+</html>
