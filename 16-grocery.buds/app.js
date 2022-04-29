@@ -153,9 +153,9 @@ function setupItems() {
   let items = getlocalStorage();
 
   if (items.length > 0) {
-    items.map((item) => [
+    items.map((item) => {
       createlistItems(item.id,item.value)
-    ])
+    })
     container.classList.add('show-container')
   };
 };
