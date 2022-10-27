@@ -45,7 +45,7 @@ const people = [
     img: 
       "./images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg",
     name: "chris",
-    job:"dectetive",
+    job:"detective",
     text: `Sometimes you have to lose all you have to find out who you truly are.`
   },
   {
